@@ -1,0 +1,56 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coffee shop - {% block title %}{% endblock %}</title>
+<!--    podpiecie cssa od bootstrapa-->
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'styles/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    {% endblock %}
+<!--    podpiecie js od bootstrapa-->
+    {% block scripts %}
+        <script src="{% static 'scripts/bootstrap.min.js' %}" async defer></script>
+    {% endblock %}
+</head>
+
+<body>
+
+{% include 'partials/_header.html' %}
+
+<main class="container mt-3">
+    <div class="row">
+        <section class="col-sm-12 cold-md-8 col-lg-6">
+            {% block container %}
+
+            {% endblock %}
+        </section>
+
+        <aside class="col-sm-12 cold-md-4 col-lg-6">
+            {% block aside %}
+
+                <h2>Jestem asidem z base'a</h2>
+            {% endblock %}
+        </aside>
+
+    </div>
+    <div class="row">
+        <div class="col-sm-4 offset-8 col-md-2 offset-md-10">
+            {% include 'partials/_footer.html' %}
+        </div>
+    </div>
+</main>
+
+
+
+<h1>Jestem z base'a</h1>
+
+
+
+
+</body>
+</html>

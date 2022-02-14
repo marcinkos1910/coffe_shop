@@ -1,14 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Home View</h1>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}Home{% endblock %}
+{% block container %}
+<h1>Home View</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, deleniti dolores dolorum error fugiat hic illum inventore laboriosam natus numquam officiis placeat quasi soluta temporibus vitae? Commodi culpa cum dicta esse eveniet explicabo fugit harum impedit in ipsam itaque labore, laborum laudantium minima praesentium quaerat rem rerum tempore vel voluptatibus! At debitis dignissimos distinctio, dolorum exercitationem fuga ipsam, ipsum laudantium necessitatibus quaerat quidem recusandae sunt. Aperiam atque aut consequatur distinctio eaque eius eos incidunt ipsam nobis non nostrum pariatur porro repudiandae tempore temporibus, ullam, voluptatibus! Alias aliquid asperiores cumque dignissimos dolorem explicabo facilis hic id natus qui? Adipisci amet architecto aspernatur assumenda, autem beatae consequuntur culpa cum dolorem doloremque in, ipsam magni maiores maxime minima minus modi molestiae mollitia nesciunt nihil nobis numquam perspiciatis, placeat possimus sequi tempora velit! Ad alias aperiam architecto consectetur cum cumque debitis dolor eaque eius expedita fugiat illum iste laboriosam libero molestias necessitatibus, nesciunt non numquam placeat quaerat quia quis saepe soluta tempore velit veritatis vitae voluptatum? Animi beatae commodi dolorum eius explicabo inventore ipsa iste, iusto laborum maxime minus nam necessitatibus nulla placeat quae quas qui ratione sunt totam ullam! Accusantium amet architecto harum ipsa itaque labore, obcaecati odio, quae rem, unde vel veritatis.</p>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'scripts/app.js' %}" async defer></script>
+{% endblock %}
+
+{% block aside %}
+<!--    {{ block.super }}-->
+<!--    {{ block.super }}-->
+    <h2>Aside</h2>
+<!--    {{ block.super }}-->
+{% endblock %}
